@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Share Resources</title>
+    <link rel="icon" href="CTU logo.jpg" />
+  </head>
+
+  <body>
+    <h1>Share Resources</h1>
+    <p>
+      If you are interested in joining us please upload your information below.
+    </p>
+
+    <!-- File Upload Form -->
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <input type="file" name="resource" accept=".pdf" required />
+      <button type="submit">Upload</button>
+    </form>
+
+    <!-- List of Uploaded Resources -->
+    <h2>Available Resources</h2>
+    <p2
+      >To find out more about our modules below are Prospectus <br />
+      Part-Time and Full-time.</p2
+    >
+    <ul>
+      <a href="./full-time.pdf" download class="download-btn"
+        >Download Full-time</a
+      >
+      <br />
+
+      <a href="./part-time.pdf" download class="download-btn"
+        >Download Part-time</a
+      >
+
+      <!-- Add more resources dynamically as they get uploaded -->
+    </ul>
+    <footer>
+      <p>
+        Author: chuma vhuhwavho<br />
+        <a href="chuma.vhuhwavho09@gmail.com">chuma.vhuhwavho09@gmail.com</a>
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+}
+
+th {
+    background-color: #22b9c4;
+}
+
+@media (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+}
+
+body {
+    background-image: url('CTU\ work.jpeg'); /* Replace 'background.jpg' with the path to your image file */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh; /* This ensures the background covers the entire viewport height */
+    margin: 0;
+    padding: 0;
+    color: white; /* Set text color to contrast with the background */
+}
+
+/* Additional styles for content */
+.content {
+    text-align: center;
+    padding: 50px;
+}

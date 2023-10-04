@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.contact-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.contact-form textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+}
+
+.contact-form button {
+    background-color: #4caf50;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #45a049;
+}
+
+function initMap() {
+    var ctuLocation = { lat: 40.7128, lng: -74.0060 }; // Replace with your campus coordinates
+    var map = new google.maps.Map(document.getElementById('map'), {
+        center: ctuLocation,
+        zoom: 15
+    });
+    var marker = new google.maps.Marker({ position: ctuLocation, map: map });
+}

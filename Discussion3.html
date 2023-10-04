@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discussion</title>
+    <link rel="icon" href="CTU logo.jpg" />
+    <link rel="stylesheet" href="DiscussionScript.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .discussion-form {
+        max-width: 500px;
+        margin: 20px auto;
+      }
+
+      .discussion-form input[type="text"],
+      .discussion-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+
+      .discussion-form button {
+        background-color: #4caf50;
+        color: white;
+        padding: 15px 20px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .discussion-form button:hover {
+        background-color: #45a049;
+      }
+
+      .discussion-thread {
+        max-width: 600px;
+        margin: 20px auto;
+      }
+
+      .discussion-post {
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Discussion Forum</h1>
+
+    <!-- Discussion Form -->
+    <div class="discussion-form">
+      <input type="text" placeholder="Your Name" required /><br />
+      <textarea
+        placeholder="Ask a question or post a comment"
+        required
+      ></textarea
+      ><br />
+      <button type="button" onclick="postDiscussion()">Post</button>
+    </div>
+
+    <!-- Discussion Thread -->
+    <div class="discussion-thread">
+      <div class="discussion-post">
+        <strong>CTU-Training Solutions:</strong> You are open to ask any
+        questions concerning our campus?<br />
+        <small>Posted on: October 10, 2023</small>
+      </div>
+      <!-- More discussion posts will appear here -->
+    </div>
+
+    <script>
+      function postDiscussion() {
+        var name = document.querySelector(
+          '.discussion-form input[type="text"]'
+        ).value;
+        var message = document.querySelector(".discussion-form textarea").value;
+
+        // Create a new discussion post element
+        var postElement = document.createElement("div");
+        postElement.classList.add("discussion-post");
+        postElement.innerHTML =
+          "<strong>" +
+          name +
+          ":</strong> " +
+          message +
+          "<br><small>Posted on: " +
+          new Date().toDateString() +
+          "</small>";
+
+        // Append the new post to the discussion thread
+        document.querySelector(".discussion-thread").appendChild(postElement);
+
+        // Clear the form fields
+        document.querySelector('.discussion-form input[type="text"]').value =
+          "";
+        document.querySelector(".discussion-form textarea").value = "";
+      }
+    </script>
+    <footer>
+      <p>
+        Author:Mongameli Miniyake <br />
+        <a href="Mongamelibandile@icloud.com">Mongamelibandile@icloud.com</a>
+      </p>
+    </footer>
+  </body>
+</html>
